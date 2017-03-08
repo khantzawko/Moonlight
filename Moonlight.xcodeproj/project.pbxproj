@@ -8,13 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		1422C5AC1E706E9D00B43455 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1422C5AB1E706E9D00B43455 /* AppDelegate.swift */; };
-		1422C5AE1E706E9D00B43455 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1422C5AD1E706E9D00B43455 /* ViewController.swift */; };
 		1422C5B11E706E9D00B43455 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1422C5AF1E706E9D00B43455 /* Main.storyboard */; };
 		1422C5B41E706E9D00B43455 /* Moonlight.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1422C5B21E706E9D00B43455 /* Moonlight.xcdatamodeld */; };
 		1422C5B61E706E9D00B43455 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1422C5B51E706E9D00B43455 /* Assets.xcassets */; };
 		1422C5B91E706E9D00B43455 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1422C5B71E706E9D00B43455 /* LaunchScreen.storyboard */; };
 		1422C5C41E706E9D00B43455 /* MoonlightTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1422C5C31E706E9D00B43455 /* MoonlightTests.swift */; };
 		1422C5CF1E706E9D00B43455 /* MoonlightUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1422C5CE1E706E9D00B43455 /* MoonlightUITests.swift */; };
+		1422C5DF1E7073DE00B43455 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1422C5DD1E7073DE00B43455 /* SWRevealViewController.m */; };
+		1422C5E81E70755900B43455 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1422C5E71E70755900B43455 /* MainViewController.swift */; };
+		1422C5EB1E7077C500B43455 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1422C5EA1E7077C500B43455 /* MenuViewController.swift */; };
+		1422C5ED1E70815D00B43455 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1422C5EC1E70815D00B43455 /* AboutViewController.swift */; };
+		1422C5EF1E70816B00B43455 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1422C5EE1E70816B00B43455 /* ProfileViewController.swift */; };
+		1422C5F51E7081BD00B43455 /* ReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1422C5F41E7081BD00B43455 /* ReportViewController.swift */; };
+		1422C5F71E7081F200B43455 /* ManageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1422C5F61E7081F200B43455 /* ManageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +43,6 @@
 /* Begin PBXFileReference section */
 		1422C5A81E706E9D00B43455 /* Moonlight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Moonlight.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1422C5AB1E706E9D00B43455 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1422C5AD1E706E9D00B43455 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		1422C5B01E706E9D00B43455 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1422C5B31E706E9D00B43455 /* Moonlight.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Moonlight.xcdatamodel; sourceTree = "<group>"; };
 		1422C5B51E706E9D00B43455 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -49,6 +54,15 @@
 		1422C5CA1E706E9D00B43455 /* MoonlightUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MoonlightUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1422C5CE1E706E9D00B43455 /* MoonlightUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoonlightUITests.swift; sourceTree = "<group>"; };
 		1422C5D01E706E9D00B43455 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1422C5DC1E7073DE00B43455 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		1422C5DD1E7073DE00B43455 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		1422C5E61E7074A700B43455 /* Moonlight-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Moonlight-Bridging-Header.h"; sourceTree = "<group>"; };
+		1422C5E71E70755900B43455 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		1422C5EA1E7077C500B43455 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		1422C5EC1E70815D00B43455 /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		1422C5EE1E70816B00B43455 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		1422C5F41E7081BD00B43455 /* ReportViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportViewController.swift; sourceTree = "<group>"; };
+		1422C5F61E7081F200B43455 /* ManageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,13 +113,14 @@
 		1422C5AA1E706E9D00B43455 /* Moonlight */ = {
 			isa = PBXGroup;
 			children = (
-				1422C5AB1E706E9D00B43455 /* AppDelegate.swift */,
-				1422C5AD1E706E9D00B43455 /* ViewController.swift */,
+				1422C5EA1E7077C500B43455 /* MenuViewController.swift */,
+				1422C5E71E70755900B43455 /* MainViewController.swift */,
+				1422C5F61E7081F200B43455 /* ManageViewController.swift */,
+				1422C5F41E7081BD00B43455 /* ReportViewController.swift */,
+				1422C5EE1E70816B00B43455 /* ProfileViewController.swift */,
+				1422C5EC1E70815D00B43455 /* AboutViewController.swift */,
 				1422C5AF1E706E9D00B43455 /* Main.storyboard */,
-				1422C5B51E706E9D00B43455 /* Assets.xcassets */,
-				1422C5B71E706E9D00B43455 /* LaunchScreen.storyboard */,
-				1422C5BA1E706E9D00B43455 /* Info.plist */,
-				1422C5B21E706E9D00B43455 /* Moonlight.xcdatamodeld */,
+				1422C5E91E70756300B43455 /* Supporting files */,
 			);
 			path = Moonlight;
 			sourceTree = "<group>";
@@ -126,6 +141,30 @@
 				1422C5D01E706E9D00B43455 /* Info.plist */,
 			);
 			path = MoonlightUITests;
+			sourceTree = "<group>";
+		};
+		1422C5DE1E7073DE00B43455 /* SWRevealViewController */ = {
+			isa = PBXGroup;
+			children = (
+				1422C5DC1E7073DE00B43455 /* SWRevealViewController.h */,
+				1422C5DD1E7073DE00B43455 /* SWRevealViewController.m */,
+			);
+			name = SWRevealViewController;
+			path = ../../../Dropbox/Developer/MMSportsDigest/MMSportsDigest;
+			sourceTree = "<group>";
+		};
+		1422C5E91E70756300B43455 /* Supporting files */ = {
+			isa = PBXGroup;
+			children = (
+				1422C5DE1E7073DE00B43455 /* SWRevealViewController */,
+				1422C5B51E706E9D00B43455 /* Assets.xcassets */,
+				1422C5E61E7074A700B43455 /* Moonlight-Bridging-Header.h */,
+				1422C5AB1E706E9D00B43455 /* AppDelegate.swift */,
+				1422C5B71E706E9D00B43455 /* LaunchScreen.storyboard */,
+				1422C5BA1E706E9D00B43455 /* Info.plist */,
+				1422C5B21E706E9D00B43455 /* Moonlight.xcdatamodeld */,
+			);
+			name = "Supporting files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -265,9 +304,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1422C5AE1E706E9D00B43455 /* ViewController.swift in Sources */,
+				1422C5F51E7081BD00B43455 /* ReportViewController.swift in Sources */,
+				1422C5ED1E70815D00B43455 /* AboutViewController.swift in Sources */,
 				1422C5B41E706E9D00B43455 /* Moonlight.xcdatamodeld in Sources */,
+				1422C5EB1E7077C500B43455 /* MenuViewController.swift in Sources */,
 				1422C5AC1E706E9D00B43455 /* AppDelegate.swift in Sources */,
+				1422C5F71E7081F200B43455 /* ManageViewController.swift in Sources */,
+				1422C5EF1E70816B00B43455 /* ProfileViewController.swift in Sources */,
+				1422C5DF1E7073DE00B43455 /* SWRevealViewController.m in Sources */,
+				1422C5E81E70755900B43455 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -424,6 +469,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.khantzawko.Moonlight;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Moonlight/Moonlight-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -437,6 +483,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.khantzawko.Moonlight;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Moonlight/Moonlight-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
