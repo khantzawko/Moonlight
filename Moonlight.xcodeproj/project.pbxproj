@@ -21,6 +21,9 @@
 		1422C5EF1E70816B00B43455 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1422C5EE1E70816B00B43455 /* ProfileViewController.swift */; };
 		1422C5F51E7081BD00B43455 /* ReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1422C5F41E7081BD00B43455 /* ReportViewController.swift */; };
 		1422C5F71E7081F200B43455 /* ManageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1422C5F61E7081F200B43455 /* ManageViewController.swift */; };
+		69EEAEF52AA70DB8825F3CC9 /* Pods_MoonlightTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85CEB2D83911B66F614962A1 /* Pods_MoonlightTests.framework */; };
+		BA9B84EB645FC80BFD70BFD5 /* Pods_MoonlightUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 761A979B08E3E7627819C715 /* Pods_MoonlightUITests.framework */; };
+		D9FE442AE449A4042EFFACB4 /* Pods_Moonlight.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6B8776661500BFF3B3E9D03 /* Pods_Moonlight.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +66,15 @@
 		1422C5EE1E70816B00B43455 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		1422C5F41E7081BD00B43455 /* ReportViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportViewController.swift; sourceTree = "<group>"; };
 		1422C5F61E7081F200B43455 /* ManageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManageViewController.swift; sourceTree = "<group>"; };
+		1E1BFF657CB655506D2A1AE9 /* Pods-MoonlightUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoonlightUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MoonlightUITests/Pods-MoonlightUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		3492685258C8FC053094575C /* Pods-MoonlightTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoonlightTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MoonlightTests/Pods-MoonlightTests.debug.xcconfig"; sourceTree = "<group>"; };
+		5E22950F50E8CF14A0674E91 /* Pods-Moonlight.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Moonlight.release.xcconfig"; path = "Pods/Target Support Files/Pods-Moonlight/Pods-Moonlight.release.xcconfig"; sourceTree = "<group>"; };
+		761A979B08E3E7627819C715 /* Pods_MoonlightUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MoonlightUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		85CEB2D83911B66F614962A1 /* Pods_MoonlightTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MoonlightTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		898BAFD588CAF773965F699F /* Pods-MoonlightUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoonlightUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MoonlightUITests/Pods-MoonlightUITests.release.xcconfig"; sourceTree = "<group>"; };
+		D6B8776661500BFF3B3E9D03 /* Pods_Moonlight.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Moonlight.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E1F1D70CDB494B76C2D1A8B9 /* Pods-MoonlightTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoonlightTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MoonlightTests/Pods-MoonlightTests.release.xcconfig"; sourceTree = "<group>"; };
+		ED009C6905DE98AE2D294B03 /* Pods-Moonlight.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Moonlight.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Moonlight/Pods-Moonlight.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D9FE442AE449A4042EFFACB4 /* Pods_Moonlight.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				69EEAEF52AA70DB8825F3CC9 /* Pods_MoonlightTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,6 +98,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA9B84EB645FC80BFD70BFD5 /* Pods_MoonlightUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,6 +112,8 @@
 				1422C5C21E706E9D00B43455 /* MoonlightTests */,
 				1422C5CD1E706E9D00B43455 /* MoonlightUITests */,
 				1422C5A91E706E9D00B43455 /* Products */,
+				4CC53A9B1DE4229C64EB8153 /* Pods */,
+				AD3D5F5C1E96F3B9044069C4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -167,6 +184,29 @@
 			name = "Supporting files";
 			sourceTree = "<group>";
 		};
+		4CC53A9B1DE4229C64EB8153 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				ED009C6905DE98AE2D294B03 /* Pods-Moonlight.debug.xcconfig */,
+				5E22950F50E8CF14A0674E91 /* Pods-Moonlight.release.xcconfig */,
+				3492685258C8FC053094575C /* Pods-MoonlightTests.debug.xcconfig */,
+				E1F1D70CDB494B76C2D1A8B9 /* Pods-MoonlightTests.release.xcconfig */,
+				1E1BFF657CB655506D2A1AE9 /* Pods-MoonlightUITests.debug.xcconfig */,
+				898BAFD588CAF773965F699F /* Pods-MoonlightUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		AD3D5F5C1E96F3B9044069C4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D6B8776661500BFF3B3E9D03 /* Pods_Moonlight.framework */,
+				85CEB2D83911B66F614962A1 /* Pods_MoonlightTests.framework */,
+				761A979B08E3E7627819C715 /* Pods_MoonlightUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -174,9 +214,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1422C5D31E706E9D00B43455 /* Build configuration list for PBXNativeTarget "Moonlight" */;
 			buildPhases = (
+				9647B110F5F3AE713D4B929B /* [CP] Check Pods Manifest.lock */,
 				1422C5A41E706E9C00B43455 /* Sources */,
 				1422C5A51E706E9C00B43455 /* Frameworks */,
 				1422C5A61E706E9C00B43455 /* Resources */,
+				18C697363811ADB8E2C10606 /* [CP] Embed Pods Frameworks */,
+				6B6290897196D4001AED2DD1 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -191,9 +234,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1422C5D61E706E9D00B43455 /* Build configuration list for PBXNativeTarget "MoonlightTests" */;
 			buildPhases = (
+				C588115F476C0D3B7CD1CE85 /* [CP] Check Pods Manifest.lock */,
 				1422C5BB1E706E9D00B43455 /* Sources */,
 				1422C5BC1E706E9D00B43455 /* Frameworks */,
 				1422C5BD1E706E9D00B43455 /* Resources */,
+				C50D5596F4AE2E795DA1C780 /* [CP] Embed Pods Frameworks */,
+				68E62C375CF2B287820C4432 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -209,9 +255,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1422C5D91E706E9D00B43455 /* Build configuration list for PBXNativeTarget "MoonlightUITests" */;
 			buildPhases = (
+				F4F665BF7F9DF2ABF5B5543D /* [CP] Check Pods Manifest.lock */,
 				1422C5C61E706E9D00B43455 /* Sources */,
 				1422C5C71E706E9D00B43455 /* Frameworks */,
 				1422C5C81E706E9D00B43455 /* Resources */,
+				ADA2C2E2B055D95E5A230BE4 /* [CP] Embed Pods Frameworks */,
+				5AF63D13ED28CBC6F8E98123 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -298,6 +347,144 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		18C697363811ADB8E2C10606 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Moonlight/Pods-Moonlight-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5AF63D13ED28CBC6F8E98123 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MoonlightUITests/Pods-MoonlightUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		68E62C375CF2B287820C4432 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MoonlightTests/Pods-MoonlightTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6B6290897196D4001AED2DD1 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Moonlight/Pods-Moonlight-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9647B110F5F3AE713D4B929B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		ADA2C2E2B055D95E5A230BE4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MoonlightUITests/Pods-MoonlightUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C50D5596F4AE2E795DA1C780 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MoonlightTests/Pods-MoonlightTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C588115F476C0D3B7CD1CE85 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F4F665BF7F9DF2ABF5B5543D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1422C5A41E706E9C00B43455 /* Sources */ = {
@@ -462,6 +649,7 @@
 		};
 		1422C5D41E706E9D00B43455 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ED009C6905DE98AE2D294B03 /* Pods-Moonlight.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = EX9SP8QRW2;
@@ -476,6 +664,7 @@
 		};
 		1422C5D51E706E9D00B43455 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5E22950F50E8CF14A0674E91 /* Pods-Moonlight.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = EX9SP8QRW2;
@@ -490,6 +679,7 @@
 		};
 		1422C5D71E706E9D00B43455 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3492685258C8FC053094575C /* Pods-MoonlightTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -505,6 +695,7 @@
 		};
 		1422C5D81E706E9D00B43455 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E1F1D70CDB494B76C2D1A8B9 /* Pods-MoonlightTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -520,6 +711,7 @@
 		};
 		1422C5DA1E706E9D00B43455 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1E1BFF657CB655506D2A1AE9 /* Pods-MoonlightUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = EX9SP8QRW2;
@@ -534,6 +726,7 @@
 		};
 		1422C5DB1E706E9D00B43455 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 898BAFD588CAF773965F699F /* Pods-MoonlightUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = EX9SP8QRW2;
