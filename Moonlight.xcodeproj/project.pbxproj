@@ -21,6 +21,8 @@
 		1422C5EF1E70816B00B43455 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1422C5EE1E70816B00B43455 /* ProfileViewController.swift */; };
 		1422C5F51E7081BD00B43455 /* ReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1422C5F41E7081BD00B43455 /* ReportViewController.swift */; };
 		1422C5F71E7081F200B43455 /* ManageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1422C5F61E7081F200B43455 /* ManageViewController.swift */; };
+		14D81B601E712D8800B10B31 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 14D81B5F1E712D8800B10B31 /* GoogleService-Info.plist */; };
+		14D81B641E716FC100B10B31 /* ItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D81B631E716FC100B10B31 /* ItemViewController.swift */; };
 		69EEAEF52AA70DB8825F3CC9 /* Pods_MoonlightTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85CEB2D83911B66F614962A1 /* Pods_MoonlightTests.framework */; };
 		BA9B84EB645FC80BFD70BFD5 /* Pods_MoonlightUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 761A979B08E3E7627819C715 /* Pods_MoonlightUITests.framework */; };
 		D9FE442AE449A4042EFFACB4 /* Pods_Moonlight.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6B8776661500BFF3B3E9D03 /* Pods_Moonlight.framework */; };
@@ -66,6 +68,8 @@
 		1422C5EE1E70816B00B43455 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		1422C5F41E7081BD00B43455 /* ReportViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportViewController.swift; sourceTree = "<group>"; };
 		1422C5F61E7081F200B43455 /* ManageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManageViewController.swift; sourceTree = "<group>"; };
+		14D81B5F1E712D8800B10B31 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		14D81B631E716FC100B10B31 /* ItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemViewController.swift; sourceTree = "<group>"; };
 		1E1BFF657CB655506D2A1AE9 /* Pods-MoonlightUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoonlightUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MoonlightUITests/Pods-MoonlightUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		3492685258C8FC053094575C /* Pods-MoonlightTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoonlightTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MoonlightTests/Pods-MoonlightTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5E22950F50E8CF14A0674E91 /* Pods-Moonlight.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Moonlight.release.xcconfig"; path = "Pods/Target Support Files/Pods-Moonlight/Pods-Moonlight.release.xcconfig"; sourceTree = "<group>"; };
@@ -132,6 +136,7 @@
 			children = (
 				1422C5EA1E7077C500B43455 /* MenuViewController.swift */,
 				1422C5E71E70755900B43455 /* MainViewController.swift */,
+				14D81B631E716FC100B10B31 /* ItemViewController.swift */,
 				1422C5F61E7081F200B43455 /* ManageViewController.swift */,
 				1422C5F41E7081BD00B43455 /* ReportViewController.swift */,
 				1422C5EE1E70816B00B43455 /* ProfileViewController.swift */,
@@ -174,6 +179,7 @@
 			isa = PBXGroup;
 			children = (
 				1422C5DE1E7073DE00B43455 /* SWRevealViewController */,
+				14D81B5F1E712D8800B10B31 /* GoogleService-Info.plist */,
 				1422C5B51E706E9D00B43455 /* Assets.xcassets */,
 				1422C5E61E7074A700B43455 /* Moonlight-Bridging-Header.h */,
 				1422C5AB1E706E9D00B43455 /* AppDelegate.swift */,
@@ -327,6 +333,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1422C5B91E706E9D00B43455 /* LaunchScreen.storyboard in Resources */,
+				14D81B601E712D8800B10B31 /* GoogleService-Info.plist in Resources */,
 				1422C5B61E706E9D00B43455 /* Assets.xcassets in Resources */,
 				1422C5B11E706E9D00B43455 /* Main.storyboard in Resources */,
 			);
@@ -498,6 +505,7 @@
 				1422C5AC1E706E9D00B43455 /* AppDelegate.swift in Sources */,
 				1422C5F71E7081F200B43455 /* ManageViewController.swift in Sources */,
 				1422C5EF1E70816B00B43455 /* ProfileViewController.swift in Sources */,
+				14D81B641E716FC100B10B31 /* ItemViewController.swift in Sources */,
 				1422C5DF1E7073DE00B43455 /* SWRevealViewController.m in Sources */,
 				1422C5E81E70755900B43455 /* MainViewController.swift in Sources */,
 			);
@@ -758,6 +766,7 @@
 				1422C5D51E706E9D00B43455 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1422C5D61E706E9D00B43455 /* Build configuration list for PBXNativeTarget "MoonlightTests" */ = {
 			isa = XCConfigurationList;
@@ -766,6 +775,7 @@
 				1422C5D81E706E9D00B43455 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1422C5D91E706E9D00B43455 /* Build configuration list for PBXNativeTarget "MoonlightUITests" */ = {
 			isa = XCConfigurationList;
@@ -774,6 +784,7 @@
 				1422C5DB1E706E9D00B43455 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

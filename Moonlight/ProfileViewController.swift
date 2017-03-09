@@ -22,10 +22,12 @@ class ProfileViewController: UIViewController {
         }
         
         self.revealViewController().bounceBackOnOverdraw = true
-        self.revealViewController().rightViewRevealWidth = 300
+        self.revealViewController().rightViewRevealWidth = 250
 
         // Do any additional setup after loading the view.
     }
+    
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

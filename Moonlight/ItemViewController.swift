@@ -1,17 +1,17 @@
 //
-//  MainViewController.swift
+//  ItemViewController.swift
 //  Moonlight
 //
-//  Created by Khant Zaw Ko on 8/3/17.
+//  Created by Khant Zaw Ko on 9/3/17.
 //  Copyright © 2017 Khant Zaw Ko. All rights reserved.
 //
 
 import UIKit
 
-class MainViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+class ItemViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
 
-    @IBOutlet weak var menuButton: UIBarButtonItem!
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var menuButton: UIBarButtonItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,11 +22,7 @@ class MainViewController: UIViewController, UICollectionViewDelegate, UICollecti
         print(collectionView.frame.size.width)
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addTapped))
-
-
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
+        
         if self.revealViewController() != nil {
             menuButton.target = self.revealViewController()
             menuButton.action = #selector(SWRevealViewController.rightRevealToggle(_:))
@@ -46,11 +42,11 @@ class MainViewController: UIViewController, UICollectionViewDelegate, UICollecti
         })
         
         alertController.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
-
+        
         alertController.addAction(UIAlertAction(title: "Add", style: .default, handler: {
             alert -> Void in
         }))
-            
+        
         self.present(alertController, animated: true, completion: nil)
     }
     
@@ -67,21 +63,10 @@ class MainViewController: UIViewController, UICollectionViewDelegate, UICollecti
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print(indexPath)
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

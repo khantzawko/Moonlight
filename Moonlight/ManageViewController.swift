@@ -13,15 +13,14 @@ private let reuseIdentifier = "Cell"
 class ManageViewController: UICollectionViewController {
 
     @IBOutlet weak var menuButton: UIBarButtonItem!
+    @IBOutlet weak var addMenuButton: UIBarButtonItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Register cell classes
         self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addTapped))
         
         if self.revealViewController() != nil {
             menuButton.target = self.revealViewController()
@@ -30,9 +29,12 @@ class ManageViewController: UICollectionViewController {
         }
         
         self.revealViewController().bounceBackOnOverdraw = true
-        self.revealViewController().rightViewRevealWidth = 300
+        self.revealViewController().rightViewRevealWidth = 250
+    }
+    
+    
+    func addTapped() {
 
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
