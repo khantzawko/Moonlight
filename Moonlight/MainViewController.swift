@@ -7,26 +7,28 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseDatabase
 
-class MainViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+private let reuseIdentifier = "Cell"
 
+class MainViewController: UICollectionViewController {
+    
     @IBOutlet weak var menuButton: UIBarButtonItem!
-    @IBOutlet weak var collectionView: UICollectionView!
+    var ref: FIRDatabaseReference!
+    
+    var menuLists = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        collectionView.delegate = self
-        collectionView.dataSource = self
-        
-        print(collectionView.frame.size.width)
-        
-        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addTapped))
-
-
+        getMenuTitle()
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        loadRevealViewController()
+    }
+    
+    func loadRevealViewController() {
         if self.revealViewController() != nil {
             menuButton.target = self.revealViewController()
             menuButton.action = #selector(SWRevealViewController.rightRevealToggle(_:))
@@ -37,35 +39,26 @@ class MainViewController: UIViewController, UICollectionViewDelegate, UICollecti
         self.revealViewController().rightViewRevealWidth = 250
     }
     
-    func addTapped() {
-        let alertController = UIAlertController(title: "New Menu", message: "Fill in the new menu you want to add.", preferredStyle: .alert)
+    func getMenuTitle() {
+        ref = FIRDatabase.database().reference().child("the-testing-one/menuList/")
         
-        alertController.addTextField(configurationHandler: { (textField) -> Void in
-            textField.placeholder = "Menu - eg. Food, Drink!"
-            //textField.textAlignment = .center
-        })
-        
-        alertController.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
-
-        alertController.addAction(UIAlertAction(title: "Add", style: .default, handler: {
-            alert -> Void in
-        }))
-            
-        self.present(alertController, animated: true, completion: nil)
+        ref.observe(.childAdded, with: {(snapshot: FIRDataSnapshot) in
+            self.menuLists.append(snapshot.key)
+            self.collectionView?.reloadData()
+        }) { (error) in
+            print(error.localizedDescription)
+        }
     }
     
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 18
+    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return menuLists.count
     }
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath as IndexPath)
-        cell.backgroundColor = UIColor.orange
+    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! MenuCell
+        cell.menuTitle.text = menuLists[indexPath.row]
         return cell
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print(indexPath)
     }
 
     override func didReceiveMemoryWarning() {
@@ -73,15 +66,13 @@ class MainViewController: UIViewController, UICollectionViewDelegate, UICollecti
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "showMenuItem" {
+            let ivc: ItemViewController = segue.destination as! ItemViewController
+            let indexPaths: [IndexPath] = (self.collectionView?.indexPathsForSelectedItems)!
+            let indexPath : NSIndexPath = indexPaths[0] as NSIndexPath
+            ivc.menuTitle = menuLists[indexPath.row]
+        }
     }
-    */
 
 }

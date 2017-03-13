@@ -7,22 +7,36 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseDatabase
 
-class ItemViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+private let reuseIdentifier = "Cell"
 
-    @IBOutlet weak var collectionView: UICollectionView!
+protocol ItemViewDelegate {
+    func sendData(itemTitleArray: [String])
+}
+
+class ItemViewController: UICollectionViewController {
+    
     @IBOutlet weak var menuButton: UIBarButtonItem!
+    var receiptItemTitleArray = [String]()
+    var delegate: ItemViewDelegate?
+    var ref: FIRDatabaseReference!
+    var itemLists = [String]()
+    var itemPriceLists = [String]()
+    var menuTitle = String()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.title = menuTitle
+
+        ref = FIRDatabase.database().reference().child("the-testing-one/itemList/\(menuTitle)")
+        getItemData()
         
-        collectionView.delegate = self
-        collectionView.dataSource = self
-        
-        print(collectionView.frame.size.width)
-        
-        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addTapped))
-        
+        loadRevealViewController()
+    }
+    
+    func loadRevealViewController() {
         if self.revealViewController() != nil {
             menuButton.target = self.revealViewController()
             menuButton.action = #selector(SWRevealViewController.rightRevealToggle(_:))
@@ -33,35 +47,36 @@ class ItemViewController: UIViewController, UICollectionViewDelegate, UICollecti
         self.revealViewController().rightViewRevealWidth = 250
     }
     
-    func addTapped() {
-        let alertController = UIAlertController(title: "New Menu", message: "Fill in the new menu you want to add.", preferredStyle: .alert)
-        
-        alertController.addTextField(configurationHandler: { (textField) -> Void in
-            textField.placeholder = "Menu - eg. Food, Drink!"
-            //textField.textAlignment = .center
-        })
-        
-        alertController.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
-        
-        alertController.addAction(UIAlertAction(title: "Add", style: .default, handler: {
-            alert -> Void in
-        }))
-        
-        self.present(alertController, animated: true, completion: nil)
+    func getItemData() {
+        ref.observe(.childAdded, with: {(snapshot: FIRDataSnapshot) in
+            self.itemLists.append(snapshot.key)
+            self.itemPriceLists.append(snapshot.childSnapshot(forPath: "price").value as! String)
+            self.collectionView?.reloadData()
+        }) { (error) in
+            print(error.localizedDescription)
+        }
     }
     
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 18
+    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return itemLists.count
     }
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath as IndexPath)
-        cell.backgroundColor = UIColor.orange
+    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! ItemCell
+        cell.itemTitle.text = itemLists[indexPath.row]
+        cell.itemPrice.text = itemPriceLists[indexPath.row] + " Ks"
         return cell
     }
     
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print(indexPath)
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        let cell = collectionView.cellForItem(at: indexPath) as! ItemCell
+        receiptItemTitleArray.append(cell.itemTitle.text!)
+        
+        //delegate?.sendData(itemTitleArray: receiptItemTitleArray)
+
+        let receiptViewController = ReceiptViewController()
+        receiptViewController.sendData(itemTitleArray: receiptItemTitleArray)
     }
     
     override func didReceiveMemoryWarning() {
@@ -70,3 +85,6 @@ class ItemViewController: UIViewController, UICollectionViewDelegate, UICollecti
     }
 
 }
+
+
+

@@ -14,7 +14,10 @@ class AboutViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        loadRevealViewController()
+    }
+    
+    func loadRevealViewController() {
         if self.revealViewController() != nil {
             menuButton.target = self.revealViewController()
             menuButton.action = #selector(SWRevealViewController.rightRevealToggle(_:))
@@ -23,8 +26,6 @@ class AboutViewController: UIViewController {
         
         self.revealViewController().bounceBackOnOverdraw = true
         self.revealViewController().rightViewRevealWidth = 250
-
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
