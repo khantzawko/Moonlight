@@ -10,7 +10,7 @@ import UIKit
 
 class MenuViewController: UITableViewController {
     
-    var menus = ["Dashboard", "Manage", "Reports", "Profile", "About"]
+    var menus = ["Point of Sale", "Manage", "Reports", "Profile", "About"]
     var menusLabels = [UILabel]()
     
     override func viewDidLoad() {

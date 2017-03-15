@@ -37,9 +37,9 @@ class ReceiptViewController: UITableViewController, ItemViewDelegate {
     
     func sendData(itemTitleArray: [String]) {
         if (tableView) != nil {
-            itemArray.append("what")
+            itemArray = itemTitleArray
             self.tableView.reloadData()
-            print("Send data", itemArray)
+            print("recieve data ->", itemArray)
         }
     }
 }
