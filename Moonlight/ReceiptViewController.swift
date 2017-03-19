@@ -7,40 +7,41 @@
 //
 
 import UIKit
+import CoreBluetooth
 
-class ReceiptViewController: UITableViewController, ItemViewDelegate {
+class ReceiptViewController: UIViewController, ItemViewControllerDelegate, UITableViewDelegate, UITableViewDataSource {
     
-    var itemArray = ["testing 1","testing 2"]
-    let itemViewController = ItemViewController()
+    @IBOutlet weak var tableView: UITableView!
+    var itemTitles = ["Please selete one"]
+    var itemPrices = ["10000"]
+    var itemQuantity = ["1"]
+    
+    let controller = ItemViewController()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        itemArray.append("what")
-        self.itemViewController.delegate = self
         self.tableView.delegate = self
         self.tableView.dataSource = self
+        controller.delegate = self
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
 
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return itemArray.count
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return itemTitles.count
     }
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! ReceiptItemCell
-        cell.receiptTitle.text = itemArray[indexPath.row]
+        cell.menuItemTitle.text = itemTitles[indexPath.row]
+        cell.menuItemPrice.text = itemPrices[indexPath.row] + " Ks"
+        cell.menuItemQuantity.text = itemQuantity[indexPath.row]
         return cell
     }
     
-    func sendData(itemTitleArray: [String]) {
-        if (tableView) != nil {
-            itemArray = itemTitleArray
-            self.tableView.reloadData()
-            print("recieve data ->", itemArray)
-        }
+    func didSelectItem(controller: ItemViewController, itemData: String) {
+        print("recieve data ->", itemData)
     }
 }
-

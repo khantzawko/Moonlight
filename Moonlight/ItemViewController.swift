@@ -12,15 +12,15 @@ import FirebaseDatabase
 
 private let reuseIdentifier = "Cell"
 
-protocol ItemViewDelegate {
-    func sendData(itemTitleArray: [String])
+protocol ItemViewControllerDelegate {
+    func didSelectItem(controller: ItemViewController, itemData: String)
 }
 
 class ItemViewController: UICollectionViewController {
     
     @IBOutlet weak var menuButton: UIBarButtonItem!
     var receiptItemTitleArray = [String]()
-    var delegate: ItemViewDelegate?
+    var delegate: ItemViewControllerDelegate? = nil
     var ref: FIRDatabaseReference!
     var itemLists = [String]()
     var itemPriceLists = [String]()
@@ -71,12 +71,8 @@ class ItemViewController: UICollectionViewController {
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
         let cell = collectionView.cellForItem(at: indexPath) as! ItemCell
-        receiptItemTitleArray.append(cell.itemTitle.text!)
-        
-        //delegate?.sendData(itemTitleArray: receiptItemTitleArray)
-
-        let receiptViewController = ReceiptViewController()
-        receiptViewController.sendData(itemTitleArray: receiptItemTitleArray)
+        delegate?.didSelectItem(controller: self, itemData: cell.itemTitle.text!)
+        print(indexPath.row)
     }
     
     override func didReceiveMemoryWarning() {

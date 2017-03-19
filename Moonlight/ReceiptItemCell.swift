@@ -10,7 +10,9 @@ import UIKit
 
 class ReceiptItemCell: UITableViewCell {
 
-    @IBOutlet weak var receiptTitle: UILabel!
+    @IBOutlet weak var menuItemQuantity: UILabel!
+    @IBOutlet weak var menuItemTitle: UILabel!
+    @IBOutlet weak var menuItemPrice: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
