@@ -12,15 +12,10 @@ import FirebaseDatabase
 
 private let reuseIdentifier = "Cell"
 
-protocol ItemViewControllerDelegate {
-    func didSelectItem(controller: ItemViewController, itemData: String)
-}
-
 class ItemViewController: UICollectionViewController {
     
     @IBOutlet weak var menuButton: UIBarButtonItem!
     var receiptItemTitleArray = [String]()
-    var delegate: ItemViewControllerDelegate? = nil
     var ref: FIRDatabaseReference!
     var itemLists = [String]()
     var itemPriceLists = [String]()
@@ -33,8 +28,14 @@ class ItemViewController: UICollectionViewController {
         ref = FIRDatabase.database().reference().child("the-testing-one/itemList/\(menuTitle)")
         getItemData()
         
+//        NotificationCenter.default.addObserver(self, selector: #selector(doThisWhenNotify), name: NSNotification.Name(rawValue: myNotificationKey), object: nil)
+        
         loadRevealViewController()
     }
+    
+//    func doThisWhenNotify() {
+//        print("loaded")
+//    }
     
     func loadRevealViewController() {
         if self.revealViewController() != nil {
@@ -64,15 +65,13 @@ class ItemViewController: UICollectionViewController {
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! ItemCell
         cell.itemTitle.text = itemLists[indexPath.row]
-        cell.itemPrice.text = itemPriceLists[indexPath.row] + " Ks"
+        cell.itemPrice.text = itemPriceLists[indexPath.row]
         return cell
     }
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
         let cell = collectionView.cellForItem(at: indexPath) as! ItemCell
-        delegate?.didSelectItem(controller: self, itemData: cell.itemTitle.text!)
-        print(indexPath.row)
+        NotificationCenter.default.post(name: Notification.Name(rawValue: myNotificationKey), object: self, userInfo: ["name": cell.itemTitle.text!, "price": cell.itemPrice.text!, "quantity": "1"])
     }
     
     override func didReceiveMemoryWarning() {

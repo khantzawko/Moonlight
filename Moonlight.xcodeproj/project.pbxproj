@@ -21,6 +21,7 @@
 		1422C5EF1E70816B00B43455 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1422C5EE1E70816B00B43455 /* ProfileViewController.swift */; };
 		1422C5F51E7081BD00B43455 /* ReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1422C5F41E7081BD00B43455 /* ReportViewController.swift */; };
 		1422C5F71E7081F200B43455 /* ManageMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1422C5F61E7081F200B43455 /* ManageMenuController.swift */; };
+		148C0EF01E87E6D4001E3490 /* NotificationCenterKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 148C0EEF1E87E6D4001E3490 /* NotificationCenterKey.swift */; };
 		14D81B601E712D8800B10B31 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 14D81B5F1E712D8800B10B31 /* GoogleService-Info.plist */; };
 		14D81B641E716FC100B10B31 /* ItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D81B631E716FC100B10B31 /* ItemViewController.swift */; };
 		14D81B691E71DB0000B10B31 /* ManageMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D81B681E71DB0000B10B31 /* ManageMenuCell.swift */; };
@@ -75,6 +76,7 @@
 		1422C5EE1E70816B00B43455 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		1422C5F41E7081BD00B43455 /* ReportViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportViewController.swift; sourceTree = "<group>"; };
 		1422C5F61E7081F200B43455 /* ManageMenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManageMenuController.swift; sourceTree = "<group>"; };
+		148C0EEF1E87E6D4001E3490 /* NotificationCenterKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationCenterKey.swift; sourceTree = "<group>"; };
 		14D81B5F1E712D8800B10B31 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		14D81B631E716FC100B10B31 /* ItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemViewController.swift; sourceTree = "<group>"; };
 		14D81B681E71DB0000B10B31 /* ManageMenuCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManageMenuCell.swift; sourceTree = "<group>"; };
@@ -196,6 +198,7 @@
 		1422C5E91E70756300B43455 /* Supporting files */ = {
 			isa = PBXGroup;
 			children = (
+				148C0EEF1E87E6D4001E3490 /* NotificationCenterKey.swift */,
 				1422C5DE1E7073DE00B43455 /* SWRevealViewController */,
 				14D81B5F1E712D8800B10B31 /* GoogleService-Info.plist */,
 				1422C5B51E706E9D00B43455 /* Assets.xcassets */,
@@ -538,6 +541,7 @@
 				14EED1A11E72DF8400CB842E /* ManageItemController.swift in Sources */,
 				14EED1A91E74525C00CB842E /* ReceiptViewController.swift in Sources */,
 				14EED1AB1E74538500CB842E /* ReceiptItemCell.swift in Sources */,
+				148C0EF01E87E6D4001E3490 /* NotificationCenterKey.swift in Sources */,
 				1422C5F51E7081BD00B43455 /* ReportViewController.swift in Sources */,
 				1422C5ED1E70815D00B43455 /* AboutViewController.swift in Sources */,
 				1422C5B41E706E9D00B43455 /* Moonlight.xcdatamodeld in Sources */,
