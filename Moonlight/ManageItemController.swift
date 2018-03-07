@@ -16,7 +16,7 @@ class ManageItemController: UICollectionViewController {
     
     @IBOutlet weak var menuButton: UIBarButtonItem!
     var menuTitle = String()
-    var ref: FIRDatabaseReference!
+    var ref: DatabaseReference!
     var itemLists = [String]()
     var itemPriceLists = [String]()
     
@@ -24,7 +24,7 @@ class ManageItemController: UICollectionViewController {
         super.viewDidLoad()
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addTapped))
         navigationItem.title = menuTitle
-        ref = FIRDatabase.database().reference().child("the-testing-one/itemList/\(menuTitle)")
+        ref = Database.database().reference().child("the-testing-one/itemList/\(menuTitle)")
         getItemData()
         loadRevealViewController()
     }
@@ -41,7 +41,7 @@ class ManageItemController: UICollectionViewController {
     }
     
     func getItemData() {
-        ref.observe(.childAdded, with: {(snapshot: FIRDataSnapshot) in
+        ref.observe(.childAdded, with: {(snapshot: DataSnapshot) in
             self.itemLists.append(snapshot.key)
             self.itemPriceLists.append(snapshot.childSnapshot(forPath: "price").value as! String)
             self.collectionView?.reloadData()
@@ -56,7 +56,7 @@ class ManageItemController: UICollectionViewController {
         ref.child(itemTitle).setValue(post)
     }
 
-    func addTapped() {
+    @objc func addTapped() {
         let alertController = UIAlertController(title: "New Item", message: "Fill in the new item you want to add.", preferredStyle: .alert)
         
         alertController.addTextField(configurationHandler: { (itemTextField) -> Void in

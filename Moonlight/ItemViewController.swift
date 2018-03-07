@@ -16,7 +16,7 @@ class ItemViewController: UICollectionViewController {
     
     @IBOutlet weak var menuButton: UIBarButtonItem!
     var receiptItemTitleArray = [String]()
-    var ref: FIRDatabaseReference!
+    var ref: DatabaseReference!
     var itemLists = [String]()
     var itemPriceLists = [String]()
     var menuTitle = String()
@@ -25,7 +25,7 @@ class ItemViewController: UICollectionViewController {
         super.viewDidLoad()
         navigationItem.title = menuTitle
 
-        ref = FIRDatabase.database().reference().child("the-testing-one/itemList/\(menuTitle)")
+        ref = Database.database().reference().child("the-testing-one/itemList/\(menuTitle)")
         getItemData()
         
 //        NotificationCenter.default.addObserver(self, selector: #selector(doThisWhenNotify), name: NSNotification.Name(rawValue: myNotificationKey), object: nil)
@@ -49,7 +49,7 @@ class ItemViewController: UICollectionViewController {
     }
     
     func getItemData() {
-        ref.observe(.childAdded, with: {(snapshot: FIRDataSnapshot) in
+        ref.observe(.childAdded, with: {(snapshot: DataSnapshot) in
             self.itemLists.append(snapshot.key)
             self.itemPriceLists.append(snapshot.childSnapshot(forPath: "price").value as! String)
             self.collectionView?.reloadData()

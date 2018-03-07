@@ -14,13 +14,13 @@ private let reuseIdentifier = "Cell"
 class ManageMenuController: UICollectionViewController {
 
     @IBOutlet weak var menuButton: UIBarButtonItem!
-    var ref: FIRDatabaseReference!
+    var ref: DatabaseReference!
     var menuLists = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addTapped))
-        ref = FIRDatabase.database().reference().child("the-testing-one/menuList/")
+        ref = Database.database().reference().child("the-testing-one/menuList/")
         getMenuData()
     }
     
@@ -43,7 +43,7 @@ class ManageMenuController: UICollectionViewController {
         self.revealViewController().rightViewRevealWidth = 250
     }
     
-    func addTapped() {
+    @objc func addTapped() {
         let alertController = UIAlertController(title: "New Menu", message: "Fill in the new menu you want to add.", preferredStyle: .alert)
         
         alertController.addTextField(configurationHandler: { (textField) -> Void in
@@ -59,9 +59,9 @@ class ManageMenuController: UICollectionViewController {
     }
     
     func getMenuData() {
-        ref = FIRDatabase.database().reference().child("the-testing-one/menuList/")
+        ref = Database.database().reference().child("the-testing-one/menuList/")
         
-        ref.observe(.childAdded, with: {(snapshot: FIRDataSnapshot) in
+        ref.observe(.childAdded, with: {(snapshot: DataSnapshot) in
             self.menuLists.append(snapshot.key)
             self.collectionView?.reloadData()
         }) { (error) in

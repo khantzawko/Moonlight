@@ -15,7 +15,7 @@ private let reuseIdentifier = "Cell"
 class MainViewController: UICollectionViewController {
     
     @IBOutlet weak var menuButton: UIBarButtonItem!
-    var ref: FIRDatabaseReference!
+    var ref: DatabaseReference!
     
     var menuLists = [String]()
     
@@ -40,9 +40,9 @@ class MainViewController: UICollectionViewController {
     }
     
     func getMenuTitle() {
-        ref = FIRDatabase.database().reference().child("the-testing-one/menuList/")
+        ref = Database.database().reference().child("the-testing-one/menuList/")
         
-        ref.observe(.childAdded, with: {(snapshot: FIRDataSnapshot) in
+        ref.observe(.childAdded, with: {(snapshot: DataSnapshot) in
             self.menuLists.append(snapshot.key)
             self.collectionView?.reloadData()
         }) { (error) in
